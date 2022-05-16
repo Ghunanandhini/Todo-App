@@ -1,36 +1,36 @@
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import TextField from '@mui/material/TextField';
-import CardHeader from '@mui/material/CardHeader';
-import Stack from '@mui/material/Stack';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Dialog from '@mui/material/Dialog';
-import IconButton from '@mui/material/IconButton';
+import {
+  AppBar,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  Container,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  TextField,
+  Toolbar,
+  Typography,
+  DialogTitle,
+  Dialog,
+} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import React, { useState } from 'react';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import { DialogActions, DialogContent } from '@mui/material';
 
-
-
-
 function App() {
 
   const _date = new Date();
-
+   
   const [value, setValues] = useState({
     title: '',
     description: '',
   });
+ 
   const [editValue, setEditValues] = useState({
     id: '',
     title: '',
@@ -39,12 +39,8 @@ function App() {
 
 
   const [arr, setArr] = useState([]);
-
   const [count, setCount] = useState(0);
-
   const [openDialog, setOpenDialog] = useState(false);
-
-
 
   const handleChange = (event) => {
     setValues({
@@ -248,6 +244,7 @@ function App() {
                 size='small'
                 variant='contained'
                 fullWidth
+                onClick={handleUpdate}
                 type="submit"
               >
                 Update
